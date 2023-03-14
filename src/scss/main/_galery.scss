@@ -1,0 +1,32 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.galery {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, auto;
+
+    &__title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    &__photos {
+        width: 100%;
+        height: 90rem;
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.galery__photos {
+    :nth-child(1) {
+        background-image: url(../../../build/img/desktop_image-deep-earth.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}
