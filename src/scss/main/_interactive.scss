@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.interactive {
+    background-image: url(../../../build/img/mobile-image-interactive.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 15%;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+    &__text {
+        background-color: v.$white;
+        grid-row: 2 / 3;
+        padding: 2rem;
+        text-align: center;
+
+        h2 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+    }
+
+
+    @include m.mobile {
+        background-image: url(../../../build/img/desktop_image-interactive.jpg);
+        background-size: 65%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        background-position: left;
+
+        &__text {
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+            padding: 8rem;
+        }
+    }
+}

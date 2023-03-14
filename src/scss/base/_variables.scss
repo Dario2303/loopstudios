@@ -1,16 +1,15 @@
-// Fuentes
-$primary_font: 'Roboto', sans-serif;
+// Fonts
+$primary_font: 'Alata', sans-serif;
+$secondary_font: 'Josefin Sans', sans-serif;
 
-// Tamaño de Media Queries
-$phone: 480px;
-$tablet: 768px;
-$desktop: 1024px;
+// Media Queries size
+$phone: 376px;
+$desktop: 1440px;
 
 // Colores
-$primary: #e8505b;
-$secondary: #455a64; 
-$black: #000;
-$white: #FFFFFF;
-$light_gray: #eceeef;
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$dark_gray: hsl(0, 0%, 55%);
+$very_dark_gray: hsl(0, 0%, 41%);
 
 $separation: 5rem;

@@ -1,0 +1,81 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-image: url(../../build/img/mobile-image-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65rem;
+    position: relative;
+
+    @include m.mobile {
+        background-image: url(../../build/img/desktop_image-hero.jpg);
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 12rem;
+        padding: 4rem 0;
+
+        @include m.mobile {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: calc(v.$separation + 2rem) 0;
+        }
+    }
+
+    &__logo {
+        width: 15rem;
+    }
+
+    &__menu {
+        color: white;
+        font-size: 3rem;
+
+        @include m.mobile {
+            display: none;
+        }
+    }
+
+    &__text {
+        color: v.$white;
+        text-align: left;
+        border: 0.2rem solid v.$white;
+        padding: 2.5rem;
+        margin-top: calc(v.$separation * 2);
+
+        h1 {
+            font-size: 3.8rem;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        @include m.mobile {
+            width: 50%;
+            padding: 3rem;
+            margin-top: 6rem;
+
+            h1 {
+                font-size: 6.5rem;
+            }
+        }
+    }
+}
+
+.nav-desktop {
+    display: none;
+    
+    @include m.mobile {
+        display: block;
+    }
+    
+    &__link {
+        margin: 0;
+        padding: 2rem;
+        color: v.$white;
+    }
+}
