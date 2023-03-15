@@ -37,6 +37,23 @@
             font-size: 3rem;
             padding: .8rem;
             cursor: pointer;
+            line-height: 1.5;
+
+            &:hover{
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display:block;
+                    width: 70%;
+                    left: auto;
+                    margin: 0 auto;
+                    height: 2px;
+                    background-color: aliceblue;
+                    transition-property: width;
+                    transition-duration: 300ms;
+                }
+        }
         }
 
         @include m.mobile {
@@ -59,15 +76,3 @@
         padding: 0;
     }
 }
-
-    @include m.mobile {
-        .nav-desktop {
-            &__link--footer{
-                padding: 0 1.5rem;
-            
-                &:first-child {
-                    padding-left: 0;
-                }
-            }
-        }
-    }
