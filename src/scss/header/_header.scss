@@ -68,12 +68,26 @@
     display: none;
     
     @include m.mobile {
-        display: block;
+        display: flex;
     }
     
     &__link {
         margin: 0;
         padding: 1.5rem 2rem;
         color: v.$white;
+        
+        &:hover{
+            
+            &::after {
+                content: '';
+                display:block;
+                width: 60%;
+                margin: 0 auto;
+                height: 2px;
+                background-color: aliceblue;
+                transition-property: width;
+                transition-duration: 300ms;
+            }
     }
+}
 }
