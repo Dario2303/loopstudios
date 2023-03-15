@@ -4,22 +4,93 @@
 
 .galery {
     display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr;
     grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, auto;
+    row-gap: 4rem;
+
+    h2 {
+        grid-column: 1 / 3;
+        text-align: center;
+    }
+
     
-    &__title {
-    display: flex;
-    justify-content: space-between;
+    &__btn {
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+        border: 2px solid v.$very_dark_gray;
+        background-color: v.$white;
+        text-transform: uppercase;
+        height: 4rem;
+        margin: 0 auto;
+        width: 16rem;
+        font-size: 1.5rem;
+
+    }
+
+    @include m.mobile {
+        grid-template-columns: 1fr, 1fr;
+        grid-template-rows: 1fr, auto;
+
+        h2 {
+            font-size: 5rem;
+            grid-column: inherit;
+            text-align: left;
+        }
+
+        &__btn {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            margin:0 0 0 auto;
+            width: 15rem;
+        }
     }
 }
 
+
+
+
 .photos {
     display: grid;
-    gap: 3rem;
+    gap: 2.5rem;
+    grid-column: 1 / 3;
 
     h3 {
         color: v.$white;
         width: 90%;
+    }
+
+    &__photo {
+        display: flex;
+        align-items:flex-end;
+        height: 12rem;
+        padding: 3rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:nth-child(1) {
+            background-image: url(../../../build/img/mobile-image-deep-earth.jpg);
+        }
+        &:nth-child(2) {
+            background-image: url(../../../build/img/mobile-image-night-arcade.jpg);
+        }
+        &:nth-child(3) {
+            background-image: url(../../../build/img/mobile-image-soccer-team.jpg);
+        }
+        &:nth-child(4) {
+            background-image: url(../../../build/img/mobile-image-grid.jpg);
+        }
+        &:nth-child(5) {
+            background-image: url(../../../build/img/mobile-image-from-above.jpg);
+        }
+        &:nth-child(6) {
+            background-image: url(../../../build/img/mobile-image-pocket-borealis.jpg);
+        }
+        &:nth-child(7) {
+            background-image: url(../../../build/img/mobile-image-curiosity.jpg);
+        }
+        &:nth-child(8) {
+            background-image: url(../../../build/img/mobile-image-fisheye.jpg);
+        }
     }
 }
 
@@ -31,6 +102,7 @@
 
         &__photo {
             display: flex;
+            height: auto;
             align-items:flex-end;
             padding: 3rem;
 
