@@ -6,7 +6,7 @@
 
 This project is from Frontend Mentor.
 
-We apply the following tools: 
+I apply the following tools: 
 
 - SASS architecture
 - GULP compiler
