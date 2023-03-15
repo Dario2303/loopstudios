@@ -28,9 +28,7 @@
         }
     }
 
-    &__logo {
-        width: 15rem;
-    }
+
 
     &__menu {
         color: white;
@@ -75,7 +73,7 @@
     
     &__link {
         margin: 0;
-        padding: 2rem;
+        padding: 1.5rem 2rem;
         color: v.$white;
     }
 }

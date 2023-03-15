@@ -24,6 +24,7 @@
         margin: 0 auto;
         width: 16rem;
         font-size: 1.5rem;
+        cursor: pointer;
 
     }
 
@@ -56,14 +57,15 @@
 
     h3 {
         color: v.$white;
-        width: 90%;
+        font-size: 2rem;
+        width: 50%;
     }
 
     &__photo {
         display: flex;
         align-items:flex-end;
         height: 12rem;
-        padding: 3rem;
+        padding: 2rem;
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -98,13 +100,15 @@
     .photos { 
         height: 90rem;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);        
+                
+        h3 {
+            width: 90%;
+            font-size: 3.3rem;
+        }
 
         &__photo {
-            display: flex;
             height: auto;
-            align-items:flex-end;
-            padding: 3rem;
+            padding: 3.2rem;
 
             &:nth-child(1) {
                 background-image: url(../../../build/img/desktop_image-deep-earth.jpg);
