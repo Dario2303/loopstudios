@@ -10,6 +10,7 @@ I apply the following tools:
 
 - SASS architecture
 - GULP compiler
+- BEM methodology
 - postcss configuration for compatibility with any browser
 - flex box and grid
 - Semantic HTML5 markup
