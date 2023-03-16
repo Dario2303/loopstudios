@@ -142,8 +142,4 @@
         padding: 1.5rem 0;
         font-weight: 300;
     }
-
-    @include m.mobile {
-        display: none;
-    }
 }
